@@ -1,0 +1,48 @@
+{
+  "name": "trust-guard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "setup": "node scripts/setup-env.mjs",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "db:migrate": "tsx scripts/db-migrate.ts",
+    "infra:up": "docker compose up -d",
+    "infra:up:local-db": "docker compose --profile local-db up -d",
+    "infra:down": "docker compose --profile local-db --profile app down",
+    "test:e2e:auth": "tsx scripts/e2e-auth.ts",
+    "test:e2e:access": "tsx scripts/e2e-access.ts",
+    "keycloak:upgrade": "tsx scripts/keycloak-upgrade.ts",
+    "test:e2e:admin": "tsx scripts/e2e-admin.ts",
+    "eval:security": "tsx scripts/eval-security.ts",
+    "eval:performance": "tsx scripts/eval-performance.ts"
+  },
+  "dependencies": {
+    "jose": "^6.2.12",
+    "lucide-react": "^1.59.0",
+    "next": "16.4.2",
+    "openid-client": "^6.8.8",
+    "pg": "^8.23.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "server-only": "^0.0.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "dotenv": "^18.0.4",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.2",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  }
+}

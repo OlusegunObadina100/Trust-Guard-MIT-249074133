@@ -10,7 +10,7 @@
   --font-sans: var(--font-jakarta);
   --font-mono: var(--font-geist-mono);
 
-  /* Brand: the vivid blue-violet of the reference design. */
+  /* Brand:the vivid blue-violet of the reference design. */
   --color-brand: #4a3aff;
   --color-brand-hover: #3a2bef;
   --color-brand-soft: #eeecff;
@@ -30,7 +30,7 @@ body {
   font-family: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Soft blue backdrop for sign-in and other standalone pages. */
+/* Soft blue backdrop for signin & other standalone pages. */
 .backdrop-brand {
   background:
     radial-gradient(60% 50% at 85% 10%, rgba(60, 90, 255, 0.55), transparent 70%),
